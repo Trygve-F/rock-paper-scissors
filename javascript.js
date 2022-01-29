@@ -2,16 +2,16 @@
 
 //begin game
 //generate prompt with 3 choices, rock paper or scissors
-let makePrompt = prompt('Rock, Paper, or Scissors?').toLowerCase();
+let playerSelection = prompt('Rock, Paper, or Scissors?').toLowerCase();
 
-//rock assign (0), paper assign (1) or scissors assign (2)
-let playerSelection 
-if (makePrompt === 'rock') {
-    playerSelection = 0;
-} else if (makePrompt === 'paper') {
-    playerSelection = 1
+//rock assign (1), paper assign (2) or scissors assign (3)
+let playerThrow 
+if (playerSelection === 'rock') {
+    playerThrow = 1;
+} else if (playerSelection === 'paper') {
+    playerThrow = 2;
 } else { 
-    playerSelection = 2
+    playerThrow = 3;
 }
 
 
@@ -19,14 +19,30 @@ if (makePrompt === 'rock') {
 
 //for computer;
 //generate random whole number between 0-3;
-//assign number to rock (0), paper (1), or scissors (2);
+let computerThrow = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
+
+//assign number to rock (1), paper (2), or scissors (3);
+let computerSelection
+if (computerThrow === 1) {
+    computerSelection = 'rock';
+} else if (computerThrow ===2) {
+    computerSelection = 'paper';
+} else {
+    computerSelection = 'scissors'
+}
+/*
+console.log(playerThrow)
+console.log(playerSelection)
+console.log(computerThrow)
+console.log(computerSelection)
+*/
 
 //for game;
 //compare computer number against players;
 //if computer number === player number: TIE play again;
-//else if computer number = 0 && player number = 2 computer wins
-//else if computer number = 1 && player number = 0 computer wins
+//else if computer number = 1 && player number = 3 computer wins
 //else if computer number = 2 && player number = 1 computer wins
+//else if computer number = 3 && player number = 2 computer wins
 //else player wins
 //go to end game
 
