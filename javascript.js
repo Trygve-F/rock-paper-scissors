@@ -39,12 +39,25 @@ console.log(computerSelection)
 
 //for game;
 //compare computer number against players;
+function playRound (playerThrow, computerThrow) {
+    if (computerThrow === 1 && playerThrow === 3) {
+        prompt('You lose! Rock beats Scissors.');
+    } else if (computerThrow === 2 && playerThrow === 1) {
+        prompt('You lose! Paper beats Rock.')
+    } else if (computerThrow === 3 && playerThrow === 2) {
+        prompt('You Lose! Scissors beats Rock.')
+    } else {
+        prompt('You Win! ' + playerSelection + ' beats ' + computerSelection + '.')
+    }
+}
+playRound()
 //if computer number === player number: TIE play again;
 //else if computer number = 1 && player number = 3 computer wins
 //else if computer number = 2 && player number = 1 computer wins
 //else if computer number = 3 && player number = 2 computer wins
 //else player wins
 //go to end game
+
 
 //end game
 //pull computer choice and players choice
