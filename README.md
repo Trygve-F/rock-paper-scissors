@@ -1,5 +1,6 @@
 # rock-paper-scissors
-Game of rock-paper-scissors playable in console only (for now).
+Game of rock-paper-scissors against computer.
+First to 5, wins.
 Styling to come.
 
 Can be played at:
